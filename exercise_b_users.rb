@@ -107,7 +107,25 @@ p eriks_hometown
 
 
 # 9. Add a pet dog to Erik called "Fluffy"
-eriks_new_pet = users["Erik"][:pets][:name] = "Fluffy"
+users["Erik"][:pets][0][:species] = "Dog"
+users["Erik"][:pets][0][:name] = "Fluffy"
+
+eriks_pet = users["Erik"][:pets][0][:species]
+
+p eriks_pet
 
 
 # 10. Add another person to the users hash
+users[:stephen] = {
+  :twitter => "s_bradley",
+  :lottery_numbers => [7, 45, 29, 32, 28, 20],
+  :home_town => "Edinburgh",
+  :pets => [
+  {
+    :name => "Islay",
+    :species => "dog"
+  }
+]
+}
+
+p users[:stephen]
