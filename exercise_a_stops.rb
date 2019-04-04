@@ -21,6 +21,7 @@ stops.delete_at(2)
 # 7. How many stops there are in the array?
 p stops.length()
 
+
 # 8. How many ways can we return `"Falkirk High"` from the array?
 
 return stops[2]

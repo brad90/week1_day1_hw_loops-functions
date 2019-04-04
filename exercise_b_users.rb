@@ -94,6 +94,8 @@ end
 
 p only_even_lotto_numbers(avril_lottery_numbers)
 
+p users["Avril"][:lottery_numbers].select{|num| num.even?}
+
 
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 eriks_lottery_numbers = users["Erik"][:lottery_numbers]
@@ -107,10 +109,12 @@ p eriks_hometown
 
 
 # 9. Add a pet dog to Erik called "Fluffy"
-users["Erik"][:pets][0][:species] = "Dog"
-users["Erik"][:pets][0][:name] = "Fluffy"
+# users["Erik"][:pets][0][:species] = "Dog"
+# users["Erik"][:pets][0][:name] = "Fluffy"
 
-eriks_pet = users["Erik"][:pets][0][:species]
+users["Erik"][:pets].last = {:name="Dog", :species=>"Fluffy"}
+
+# eriks_pet = users["Erik"][:pets][0][:species]
 
 p eriks_pet
 
